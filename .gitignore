@@ -40,3 +40,5 @@ data/history.json
 
 # OS files
 .DS_Store
+
+.claude
