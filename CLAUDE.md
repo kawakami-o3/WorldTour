@@ -52,5 +52,11 @@ WorldTour/
 - Web上の情報取得にはAgent経由のWebFetchを第一手段として使う
 - WebFetchが403/429エラー等で失敗した場合は、agent-browserで再試行する
 
+### agent-browser
+- agent-browserは直列アクセスとする。複数のAgentから同時にagent-browserを起動しないこと
+- 同一のブラウザウィンドウ・タブを使い回すこと。`--new-tab` フラグ、`--session` による複数セッション作成は使用しない。`open` コマンドで別URLに遷移すれば同一タブ内でページが切り替わるため、それを利用する
+- agent-browser使用後は `agent-browser close` でセッションを閉じること
+- headlessモードで実行すること。`--headed` フラグや `AGENT_BROWSER_HEADED=1` は使用しない（設定は `agent-browser.json` で強制済み）
+
 ### 言語
 - 記事・目次はすべて日本語で記述する
