@@ -42,3 +42,9 @@ data/history.json
 .DS_Store
 
 .claude
+
+# Codex repo-local skills
+!.agents/
+!.agents/skills/
+!.agents/skills/next-article/
+!.agents/skills/next-article/**

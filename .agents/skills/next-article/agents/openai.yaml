@@ -1,0 +1,7 @@
+interface:
+  display_name: "Next Article"
+  short_description: "WorldTourの次の記事ファイルを調査して作成"
+  default_prompt: "Use $next-article to create the next WorldTour article."
+
+policy:
+  allow_implicit_invocation: true
